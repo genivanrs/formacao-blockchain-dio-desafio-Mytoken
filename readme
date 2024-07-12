@@ -1,0 +1,60 @@
+# DIOToken
+Este Desafio criei, a partir das instruções do Instrutor Ricardo Zago, um Token do zero. DIOToken é um contrato inteligente baseado no padrão ERC20, implementado na blockchain Ethereum. Este contrato define um token chamado "DIO Coin" com o símbolo "DIO" e 2 casas decimais. O suprimento total de tokens é 1.000.000 e todos são atribuídos ao criador do contrato na implantação.
+
+## Funcionalidades
+
+### Interface ERC20
+- `totalSupply`: Retorna o suprimento total de tokens.
+- `balanceOf`: Retorna o saldo de um endereço específico.
+- `allowance`: Retorna a quantidade de tokens que um endereço pode gastar de outro.
+- `transfer`: Transfere tokens do remetente para um endereço específico.
+- `approve`: Aprova um endereço a gastar uma quantidade específica de tokens.
+- `transferFrom`: Transfere tokens de um endereço para outro, usando a permissão de gasto.
+
+### Eventos
+- `Transfer`: Emitido quando tokens são transferidos.
+- `Approval`: Emitido quando um endereço é aprovado para gastar tokens.
+
+## Implantação e Teste
+
+### Pré-requisitos
+
+- [MetaMask](https://metamask.io/): Uma carteira de criptomoedas para acessar a blockchain Ethereum.
+- [RPC](https://rpc.info/): Para conectar-se a diferentes redes Ethereum.
+- [Remix IDE](https://remix.ethereum.org/): Um ambiente de desenvolvimento para contratos inteligentes Ethereum.
+
+### Passos para Implantação
+
+1. **Configurar MetaMask**:
+   - Instale a extensão MetaMask no seu navegador.
+   - Configure uma nova carteira ou importe uma existente.
+   - Conecte-se à rede desejada (por exemplo, Ropsten Testnet).
+
+2. **Configurar RPC**:
+   - Use o [RPC](https://rpc.info/) para obter URLs RPC de diferentes redes Ethereum.
+   - Configure a URL RPC no MetaMask para conectar-se à rede desejada.
+
+3. **Desenvolver e Compilar no Remix**:
+   - Acesse [Remix IDE](https://remix.ethereum.org/).
+   - Crie um novo arquivo e copie o código do contrato DIOToken.
+   - Compile o contrato usando o compilador Solidity versão 0.8.7 ou superior.
+
+4. **Implantar no Remix**:
+   - No Remix, vá para a aba "Deploy & Run Transactions".
+   - Selecione "Injected Web3" como o ambiente. Isso conectará o Remix ao MetaMask.
+   - Implante o contrato clicando em "Deploy" e confirmando a transação no MetaMask.
+
+### Teste de Funcionalidades
+
+1. **Verificar Saldo Inicial**:
+   - Use a função `balanceOf` para verificar o saldo inicial do criador do contrato.
+   
+2. **Transferência de Tokens**:
+   - Use a função `transfer` para transferir tokens para outro endereço e verifique os saldos dos endereços envolvidos.
+
+3. **Aprovação e Transferência de Gastos**:
+   - Use a função `approve` para permitir que um endereço gaste tokens em seu nome.
+   - Use a função `transferFrom` para transferir tokens usando a permissão concedida.
+
+4. **Verificar Eventos**:
+   - Verifique os eventos `Transfer` e `Approval` no Remix para confirmar as transações.
